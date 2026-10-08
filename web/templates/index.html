@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfbot Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Discord Selfbot Dashboard</h1>
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Logs</h3>
+                <p id="totalLogs">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Recent Actions</h3>
+                <p id="recentCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Entries</h3>
+                <p id="totalEntries">0</p>
+            </div>
+        </div>
+        <div class="logs-section">
+            <h2>Live Logs (All Actions)</h2>
+            <div class="controls">
+                <button onclick="refreshLogs()">Refresh</button>
+                <button onclick="toggleAutoRefresh()">Toggle Auto-Refresh</button>
+                <button onclick="clearLogsView()">Clear View</button>
+            </div>
+            <div id="logs" class="logs-container"></div>
+        </div>
+        <div class="entries-section" style="margin-top: 20px;">
+            <h2>Minigame Entries</h2>
+            <div id="entries" class="logs-container" style="height: 400px;"></div>
+        </div>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
